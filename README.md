@@ -385,5 +385,30 @@ No API activities were profiled.
 root@MidPC:/home/student/Desktop#
 ```
 ![image](https://github.com/25tharunkumar/PCA-Matrix-Addition-With-Unified-Memory/assets/123470785/eedc9017-a4f1-4ab7-a965-72d7e6767735)
+```
+removing the memsets
+root@MidPC:/home/student/Desktop# nvcc test.cu
+root@MidPC:/home/student/Desktop# ./a.out
+./a.out Starting using Device 0: NVIDIA GeForce GTX 1660 SUPER
+Matrix size: nx 4096 ny 4096
+initialization: 	 0.385390 sec
+sumMatrix on host:	 0.068792 sec
+sumMatrix on gpu :	 0.039151 sec <<<(128,128), (32,32)>>> 
+root@MidPC:/home/student/Desktop# nvprof ./a.out
+==10297== NVPROF is profiling process 10297, command: ./a.out
+./a.out Starting using Device 0: NVIDIA GeForce GTX 1660 SUPER
+Matrix size: nx 4096 ny 4096
+initialization: 	 0.418289 sec
+sumMatrix on host:	 0.065890 sec
+sumMatrix on gpu :	 0.042262 sec <<<(128,128), (32,32)>>> 
+==10297== Profiling application: ./a.out
+==10297== Profiling result:
+No kernels were profiled.
+No API activities were profiled.
+==10297== Warning: Some profiling data are not recorded. Make sure cudaProfilerStop() or cuProfilerStop() is called before application exit to flush profile data.
+======== Error: Application received signal 139
+root@MidPC:/home/student/Desktop# ^C
+root@MidPC:/home/student/Desktop#
+```
 
 ## Result:
