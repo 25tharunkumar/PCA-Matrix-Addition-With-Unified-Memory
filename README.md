@@ -384,5 +384,6 @@ No API activities were profiled.
 ======== Error: Application received signal 139
 root@MidPC:/home/student/Desktop#
 ```
+![image](https://github.com/25tharunkumar/PCA-Matrix-Addition-With-Unified-Memory/assets/123470785/eedc9017-a4f1-4ab7-a965-72d7e6767735)
 
 ## Result:
